@@ -29,7 +29,7 @@
      <!------------- Shopify Server-side-Scripts end ---------------->
   </head>
   <body  class="template-{{ template.name | handle }}">
-    {% render 'THEME-HEADER' %}
+    {% section 'THEME-HEADER' %}
     {{ content_for_layout }}
   </body>
 </html>

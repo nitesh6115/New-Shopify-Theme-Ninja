@@ -23,6 +23,9 @@
     {%- if page_description -%}
     <meta name="description" content="{{ page_description | escape }}">
     {%- endif -%}
+    <link rel="preconnect" href="https://example.com" as="style">
+    <link rel="preconnect" href="{{ 'THEME-MIN.js' | asset_url }}" as="script">
+    <link href="{{ 'THEME-STYLE.css' | asset_url }}" rel="stylesheet">
     <!--- Contain header --->
     <!------------- Shopify Server-side-Scripts ---------------->
     {{ content_for_header }}

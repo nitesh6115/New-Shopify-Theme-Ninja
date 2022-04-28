@@ -1,1 +1,1027 @@
-{{ content_for_index }}
+<html
+      style="-ms-text-size-adjust:none; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none; margin:0; mso-line-height-rule:exactly; padding:0;"
+      xmlns:v="urn:schemas-microsoft-com:vml">
+
+  <head style="-ms-text-size-adjust:none; -webkit-text-size-adjust:none; mso-line-height-rule:exactly;">
+    <title style="-ms-text-size-adjust:none; -webkit-text-size-adjust:none; mso-line-height-rule:exactly;">
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"
+          style="-ms-text-size-adjust:none; -webkit-text-size-adjust:none; mso-line-height-rule:exactly;">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"
+          style="-ms-text-size-adjust:none; -webkit-text-size-adjust:none; mso-line-height-rule:exactly;">
+    <meta content="telephone=no" name="format-detection"
+          style="-ms-text-size-adjust:none; -webkit-text-size-adjust:none; mso-line-height-rule:exactly;">
+
+    <style>
+      * {
+        mso-line-height-rule: exactly
+      }
+
+      * {
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none
+      }
+
+      table td {
+        border-collapse: collapse
+      }
+
+      html,
+      body,
+      div {
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased
+      }
+
+      img {
+        -ms-interpolation-mode: bicubic;
+        display: block;
+        border: 0
+      }
+
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        background-color: #ffffff;
+      }
+
+      p {
+        margin: 0;
+        margin-bottom: 0 !important;
+      }
+
+      tr,
+      td {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      .body {
+        width: 600px;
+        margin-bottom: 0 !important;
+      }
+
+      .sub-body {
+        width: 553px;
+        margin-bottom: 0 !important;
+      }
+
+      .card {
+        width: 300px;
+      }
+
+      .card-container {
+        width: 250px
+      }
+
+      .subcontenedor {
+        width: 450px
+      }
+
+      .decoration-none {
+        text-decoration: none;
+      }
+
+      .uppercase {
+        text-transform: uppercase;
+      }
+
+      .white {
+        color: #fff
+      }
+
+      .black {
+        color: #000
+      }
+
+      .bold {
+        font-weight: bold
+      }
+
+      .font-16 {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .font-18 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .font-24 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        mso-ansi-font-size: 22px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .font-27 {
+        font-size: 27px;
+        font-weight: 500;
+        mso-ansi-font-size: 22px;
+        line-height: 36px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .font-32 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .font-36 {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 45px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      @media all and (max-width:600px) {
+        .displayBlock {
+          width: 100% !important;
+          display: block !important
+        }
+      }
+
+      .right {
+        text-align: right
+      }
+
+      .left {
+        text-align: left
+      }
+
+      @media screen and (max-width:640px) {
+        .card-container {
+          width: 90% !important;
+        }
+
+        .body {
+          width: 100% !important
+        }
+
+        .sub-body {
+          width: 90% !important
+        }
+
+        .contenedor {
+          width: 90% !important
+        }
+
+        .text-container {
+          width: 90% !important
+        }
+
+        .card {
+          width: 100% !important
+        }
+
+        .typoblock {
+          width: 80% !important;
+          display: block !important
+        }
+
+        .nomob {
+          display: none !important
+        }
+
+        .block {
+          display: block !important;
+          width: 100% !important
+        }
+
+        .text-right {
+          text-align: center
+        }
+
+        .center640 {
+          margin: auto;
+          text-align: center !important
+        }
+
+        .text-left {
+          text-align: center
+        }
+
+        .responsive-space-2 {
+          height: 2vw
+        }
+
+        .responsive-space-4 {
+          height: 4vw
+        }
+
+        .responsive-space-6 {
+          height: 6vw
+        }
+
+        .responsive-space-8 {
+          height: 8vw
+        }
+
+        .responsive-space-10 {
+          height: 10vw
+        }
+
+        .responsive-space-12 {
+          height: 12vw
+        }
+
+        .fullwidth {
+          width: 100% !important
+        }
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <h2>{{ email_title }}</h2>
+    {% if custom_message != blank %}
+    <p>{{ custom_message }}</p>
+    {% else %}
+    <p>{{ email_body }}</p>
+    {% endif %}
+
+    <!--HEADER-->
+    <table class="body" border="0" align="center" cellpadding="0" cellspacing="0"
+           style="font-family: Arial,sans-serif;">
+      <tbody>
+        <tr>
+          <td>
+            <table class="body" border="0" align="center" cellpadding="0" cellspacing="0"
+                   style="font-family: Arial,sans-serif;">
+              <tbody>
+                
+                <tr>
+                  <td>
+                    <table border="0" align="center" cellpadding="0" cellspacing="0"
+                           style="font-family: Arial,sans-serif;">
+                      <tbody>
+                        <tr height="25">
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td align="center">
+                            <img src="https://cdn.shopify.com/s/files/1/0263/4380/0903/files/Zero_Co-Logo-Mono-Email.png?v=1615321446" alt="" style="width:100%; max-width:150px;">
+                          </td>
+                        </tr>
+                        <tr height="25">
+                          <td></td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table border="0" align="center" cellpadding="0" cellspacing="0"
+                           style="font-family: Arial,sans-serif;">
+                      <tbody>
+
+                        <tr>
+                          <td align="center">
+                            <img src="https://cdn.shopify.com/s/files/1/0263/4380/0903/files/Shopify_Email_-_Account_Confirmation_-_Option_6.png?v=1651119094" alt="" style="width:100%; max-width:600px;">
+                          </td>
+                        </tr>
+
+
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--TEXT-->
+    <table class="body" border="0" align="center" cellpadding="0" cellspacing="0"
+           style="font-family: Arial,sans-serif; background-color: #FFF9F1;">
+      <tbody>
+        <tr>
+          <td>
+            <table class="sub-body" border="0" align="center" cellpadding="0" cellspacing="0"
+                   style="font-family: Arial,sans-serif;">
+              <tbody>
+                <tr height="51">
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <table class="text-container" border="0" align="center" cellpadding="0"
+                           cellspacing="0" style="font-family: Arial,sans-serif; width: 500px;">
+                      <tbody>
+                        <tr>
+                          <td align="center">
+                            <p style="font-size: 16px; line-height: 32px; color: #363436; text-align: left;"
+                               class="center640">
+                              Hey {{ customer.first_name }},
+                            </p>
+                          </td>
+                        </tr>
+                        <tr height="6">
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td align="center">
+                            <p style="font-size: 16px; line-height: 24px; color: #363436; text-align: left;"
+                               class="center640">
+                              Thanks for stopping by our store and adding some
+                              plastic-busting, planet-friendly do-goodies to your cart!
+                            </p>
+                          </td>
+                        </tr>
+                        <tr height="24">
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td align="center">
+                            <p style="font-size: 16px; line-height: 24px; color: #363436; text-align: left;"
+                               class="center640">
+                              We'd absolutely love it if you joined the more than 58,000+
+                              Aussies who have already waved bye-bye to single-use plastic
+                              (SUP) by ordering a box of Zero Co.
+                            </p>
+                          </td>
+                        </tr>
+                        <tr height="24">
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td align="center">
+                            <p style="font-size: 16px; line-height: 24px; color: #363436; text-align: left;"
+                               class="center640">
+                              Our products work as well (if not better) than the big name
+                              supermarket brands, without using any nasty ingredients...and we
+                              deliver direct to your door, minus all the SUP. All of this
+                              guaranteed or we'll refund your hard-earned cash.
+                            </p>
+                          </td>
+                        </tr>
+                        <tr height="24">
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td align="center">
+                            <p style="font-size: 16px; line-height: 24px; color: #363436; text-align: left;"
+                               class="center640">
+                              So come join the Great Aussie Plastic Purge and help stop 1
+                              million SUP bottles from ending up in landfill (or worse, the
+                              ocean) next year!
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr height="27">
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--PRODUCT-->
+    <table class="body" border="0" align="center" cellpadding="0" cellspacing="0"
+           style="font-family: Arial,sans-serif;  background-color: #FFF9F1;">
+      <tbody>
+        {% for line in subtotal_line_items %}
+        <tr height="16">
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <table class="sub-body" border="0" align="center" cellpadding="0" cellspacing="0"
+                   style="font-family: Arial,sans-serif; background-color: #F9F2E8;">
+              <tbody>
+                <tr height="7">
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0"
+                           style="font-family: Arial,sans-serif;">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <table border="0" align="center" cellpadding="0" cellspacing="0"
+                                   style="font-family: Arial,sans-serif;">
+                              <tbody>
+                                <tr>
+                                  <td align="center" valign="top"
+                                      style="padding: 0px 0 0px 0;">
+                                    <table width="100%" border="0" cellspacing="0"
+                                           cellpadding="0" style="direction: ltr;">
+                                      <tbody>
+                                        <tr>
+                                          <th class="displayBlock responsive-space-10"
+                                              width=""></th>
+                                          <th dir="ltr" align="top"
+                                              valign="middle"
+                                              class="displayBlock">
+                                            <table border="0" align="center"
+                                                   cellpadding="0" cellspacing="0"
+                                                   style="font-family: Arial,sans-serif; background-color: #fef8f3;">
+                                              <tbody>
+                                                <tr>
+                                                  <td>
+                                                    {% if line.image %}
+                                                    <img src="{{ line | img_url: 'compact_cropped' }}"
+                                                         alt=""
+                                                         width="178">
+                                                    {% endif %}
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </th>
+                                          <th class="displayBlock responsive-space-4"
+                                              width="32"></th>
+                                          <th dir="ltr" align="top" valign="top"
+                                              class="displayBlock">
+                                            <table class="text-container"
+                                                   border="0" align="center"
+                                                   cellpadding="0" cellspacing="0"
+                                                   style="font-family: Arial,sans-serif; width: 209px;">
+                                              <tbody>
+                                                <tr height="22">
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td>
+                                                    <p class="center640"
+                                                       style="font-size: 16px; line-height: 130%; font-weight: bold; color: #363436; text-align: left;">
+                                                      {{ line.title
+                                                                                                        }} × {{
+                                                                                                        line_display }}
+                                                    </p>
+                                                  </td>
+                                                </tr>
+                                                <tr height="5">
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td>
+                                                    <p class="center640"
+                                                       style="font-size: 16px; line-height: 14px; color: #363436; text-align: left; font-weight: 100;">
+                                                      <span
+                                                            style="font-weight: 100;">{{
+                                                                                                            line.price |
+                                                        money_without_trailing_zeros
+                                                        }}</span>
+                                                    </p>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </th>
+                                          <th class="displayBlock" width="122">
+                                          </th>
+                                          <th class="displayBlock responsive-space-10"
+                                              width=""></th>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr height="7">
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <!--CTA-->
+    <table class="body" border="0" align="center" cellpadding="0" cellspacing="0"
+           style="font-family: Arial,sans-serif;  background-color: #FFF9F1;">
+      <tbody>
+        <tr height="45">
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <table class="sub-body" border="0" align="center" cellpadding="0" cellspacing="0"
+                   style="font-family: Arial,sans-serif;">
+              <tbody>
+                <tr>
+                  <td>
+                    <table align="center" cellpadding="0" cellspacing="0" height="48"
+                           role="presentation"
+                           style="-ms-text-size-adjust: none; -webkit-text-size-adjust: none; mso-line-height-rule: exactly;"
+                           width="250">
+                      <tbody>
+                        <tr
+                            style="-ms-text-size-adjust: none; -webkit-text-size-adjust: none; mso-line-height-rule: exactly; border-radius: 30px">
+                          <td>
+                            <div>
+                              <!--[if mso]>
+<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ url }}" style="height:48px;v-text-anchor:middle;width:250px; border: 2px solid #363436;" arcsize="50%" stroke="f" fillcolor="#FFF">
+<w:anchorlock/>
+<center style="color:#363436;font-family:Arial, sans-serif;font-size:14px;text-transform:uppercase;font-weight:bold; letter-spacing: 0.05em;">
+FINISH YOUR ORDER NOW
+</center>
+</v:roundrect>
+<![endif]-->
+                              <!--[if !mso]-->
+                              <table cellpadding="0" cellspacing="0">
+                                <tbody>
+                                  <tr>
+                                    <td align="center" bgcolor="#FFF" height="48"
+                                        style="color: #FFF; display: block; border-radius: 82px; border: 2px solid #363436;"
+                                        width="250">
+                                      <a href="{{ url }}"
+                                         style="font-size:14px;text-transform:uppercase; font-family: Arial, sans-serif; text-decoration: none; line-height:48px; width:100%; display:inline-block; letter-spacing: 0.05em;">
+                                        <span style="color: #363436;">
+                                          <strong>
+                                            FINISH YOUR ORDER NOW
+                                          </strong>
+                                        </span>
+                                      </a>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <!--[endif]-->
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr height="36">
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--CIRCLES-->
+    <table class="body" border="0" align="center" cellpadding="0" cellspacing="0"
+           style="font-family: Arial,sans-serif;  background-color: #FFF9F1;">
+      <tbody>
+        <tr>
+          <td>
+            <table class="sub-body" border="0" align="center" cellpadding="0" cellspacing="0"
+                   style="font-family: Arial,sans-serif;">
+              <tbody>
+                <tr>
+                  <td>
+                    <table border="0" align="center" cellpadding="0" cellspacing="0"
+                           style="font-family: Arial,sans-serif;">
+                      <tbody>
+                        <tr>
+                          <td align="center" valign="top" style="padding: 0px 0 0px 0;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                   style="direction: ltr;">
+                              <tbody>
+                                <tr>
+                                  <th dir="ltr" align="top" valign="middle"
+                                      class="displayBlock">
+                                    <table width="141" border="0" align="center"
+                                           cellpadding="0" cellspacing="0"
+                                           style="font-family: Arial,sans-serif; color: #363436;">
+                                      <tbody>
+                                        <tr>
+                                          <td align="center">
+                                            <img src="https://iili.io/d9hxAG.png"
+                                                 alt="">
+                                          </td>
+                                        </tr>
+                                        <tr height="15">
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center">
+                                            <p
+                                               style="font-size: 16px; line-height: 130%;">
+                                              No more single-use plastic
+                                            </p>
+                                          </td>
+                                        </tr>
+                                        <tr height="10">
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center">
+                                            <p
+                                               style="font-size: 16px; line-height: 130%;">
+                                              <a href="https://www.zeroco.com.au/pages/untrash-the-planet"
+                                                 style="color: #000; font-weight: bold;">
+                                                Learn
+                                              </a>
+                                            </p>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </th>
+                                  <th class="displayBlock responsive-space-10" width="50">
+                                  </th>
+                                  <th dir="ltr" align="top" valign="middle"
+                                      class="displayBlock">
+                                    <table width="141" border="0" align="center"
+                                           cellpadding="0" cellspacing="0"
+                                           style="font-family: Arial,sans-serif; color: #363436;">
+                                      <tbody>
+                                        <tr>
+                                          <td align="center">
+                                            <img src="https://iili.io/d9ho9s.png"
+                                                 alt="">
+                                          </td>
+                                        </tr>
+                                        <tr height="15">
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center">
+                                            <p
+                                               style="font-size: 16px; line-height: 130%;">
+                                              Planet friendly products that
+                                              work
+                                            </p>
+                                          </td>
+                                        </tr>
+                                        <tr height="10">
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center">
+                                            <p
+                                               style="font-size: 16px; line-height: 130%;">
+                                              <a href="https://www.zeroco.com.au/pages/how-it-works"
+                                                 style="color: #000; font-weight: bold;">
+                                                How it works
+                                              </a>
+                                            </p>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </th>
+                                  <th class="displayBlock responsive-space-10" width="50">
+                                  </th>
+                                  <th dir="ltr" align="top" valign="middle"
+                                      class="displayBlock">
+                                    <table width="141" border="0" align="center"
+                                           cellpadding="0" cellspacing="0"
+                                           style="font-family: Arial,sans-serif; color: #363436;">
+                                      <tbody>
+                                        <tr>
+                                          <td align="center">
+                                            <img src="https://iili.io/d9hBcX.png"
+                                                 alt="">
+                                          </td>
+                                        </tr>
+                                        <tr height="15">
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center">
+                                            <p
+                                               style="font-size: 16px; line-height: 130%;">
+                                              30 day money back guarantee
+                                            </p>
+                                          </td>
+                                        </tr>
+                                        <tr height="10">
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center">
+                                            <p
+                                               style="font-size: 16px; line-height: 130%;">
+                                              <a href="https://www.zeroco.com.au/collections"
+                                                 style="color: #000; font-weight: bold;">
+                                                Shop
+                                              </a>
+                                            </p>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </th>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr height="50">
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <table border="0" align="center" cellpadding="0" cellspacing="0"
+                           style="font-family: Arial,sans-serif; border: 1px solid #F3EADF; width: 524px;"
+                           class="text-container">
+                      <tbody>
+                        <tr>
+                          <td>
+
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr height="40">
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--SOCIALS-->
+    <table class="body" border="0" align="center" cellpadding="0" cellspacing="0"
+           style="font-family: Arial,sans-serif; background-color: #FFF9F1;">
+      <tbody>
+        <tr>
+          <td>
+            <table class="sub-body" border="0" align="center" cellpadding="0" cellspacing="0"
+                   style="font-family: Arial,sans-serif;">
+              <tbody>
+                <tr>
+                  <td>
+                    <table border="0" align="center" cellpadding="0" cellspacing="0"
+                           style="font-family: Arial,sans-serif;">
+                      <tbody>
+                        <tr>
+                          <td align="center" valign="top" style="padding: 0px 0 0px 0;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                   style="direction: ltr;">
+                              <tbody>
+                                <tr>
+                                  <th dir="ltr" align="top" valign="middle"
+                                      class="displayBlock">
+                                    <table border="0" align="center" cellpadding="0"
+                                           cellspacing="0"
+                                           style="font-family: Arial,sans-serif; color: #363436;">
+                                      <tbody>
+                                        <tr>
+                                          <td>
+                                            <p
+                                               style="font-size: 16px; font-weight: bold;">
+                                              #imgoingzero
+                                            </p>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </th>
+                                  <th class="displayBlock responsive-space-4" width="35">
+                                  </th>
+                                  <th dir="ltr" align="top" valign="middle"
+                                      class="displayBlock">
+                                    <table border="0" align="center" cellpadding="0"
+                                           cellspacing="0"
+                                           style="font-family: Arial,sans-serif; color: #363436;">
+                                      <tbody>
+                                        <tr>
+                                          <td>
+                                            <a
+                                               href="https://www.instagram.com/zeroco.com.au/"><img
+                                                                                                    src="https://iili.io/d9hIt4.png"
+                                                                                                    alt=""></a>
+                                          </td>
+                                          <td width="17"></td>
+                                          <td>
+                                            <a
+                                               href="https://www.facebook.com/zeroco.com.au"><img
+                                                                                                  src="https://iili.io/d9hzNf.png"
+                                                                                                  alt=""></a>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </th>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr height="30">
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--GET IN TOUCH-->
+    <table class="body" border="0" align="center" cellpadding="0" cellspacing="0"
+           style="font-family: Arial,sans-serif; background-color: #93C8D4;">
+      <tbody>
+        <tr>
+          <td>
+            <table class="sub-body" border="0" align="center" cellpadding="0" cellspacing="0"
+                   style="font-family: Arial,sans-serif;">
+              <tbody>
+                <tr>
+                  <td>
+                    <table border="0" align="center" cellpadding="0" cellspacing="0"
+                           style="font-family: Arial,sans-serif;">
+                      <tbody>
+                        <tr>
+                          <td align="center" valign="top" style="padding: 0px 0 0px 0;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                   style="direction: ltr;">
+                              <tbody>
+                                <tr>
+                                  <th dir="ltr" align="top" valign="middle"
+                                      class="displayBlock">
+                                    <table border="0" align="center" cellpadding="0"
+                                           cellspacing="0"
+                                           style="font-family: Arial,sans-serif;">
+                                      <tbody>
+                                        <tr>
+                                          <td>
+                                            <img src="https://iili.io/d9hCSn.png"
+                                                 alt="">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </th>
+                                  <th class="displayBlock responsive-space-4" width="45">
+                                  </th>
+                                  <th dir="ltr" align="top" valign="middle"
+                                      class="displayBlock">
+                                    <table width="191" border="0" align="center"
+                                           cellpadding="0" cellspacing="0"
+                                           style="font-family: Arial,sans-serif; color: #363436;">
+                                      <tbody>
+                                        <tr>
+                                          <td align="center">
+                                            <p
+                                               style="font-size: 20px; line-height: 130%; font-weight: bold;">
+                                              Got a question? We’d love to
+                                              help
+                                            </p>
+                                          </td>
+                                        </tr>
+                                        <tr height="24">
+                                          <td></td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                            <table align="center"
+                                                   cellpadding="0" cellspacing="0"
+                                                   height="48" role="presentation"
+                                                   style="-ms-text-size-adjust: none; -webkit-text-size-adjust: none; mso-line-height-rule: exactly;"
+                                                   width="178">
+                                              <tbody>
+                                                <tr
+                                                    style="-ms-text-size-adjust: none; -webkit-text-size-adjust: none; mso-line-height-rule: exactly; border-radius: 30px">
+                                                  <td>
+                                                    <div>
+                                                      <!--[if mso]>
+<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="mailto:hello@zeroco.com.au" style="height:48px;v-text-anchor:middle;width:178px; border: 2px solid #363436;" arcsize="50%" stroke="f" fillcolor="#FFF">
+<w:anchorlock/>
+<center style="color:#363436;font-family:Arial, sans-serif;font-size:14px;text-transform:uppercase;font-weight:bold; letter-spacing: 0.05em;">
+GET IN TOUCH
+</center>
+</v:roundrect>
+<![endif]-->
+                                                      <!--[if !mso]-->
+                                                      <table
+                                                             cellpadding="0"
+                                                             cellspacing="0">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td align="center"
+                                                                bgcolor="#FFF"
+                                                                height="48"
+                                                                style="color: #FFF; display: block; border-radius: 82px; border: 2px solid #363436;"
+                                                                width="178">
+                                                              <a href="mailto:hello@zeroco.com.au"
+                                                                 style="font-size:14px;text-transform:uppercase; font-family: Arial, sans-serif; text-decoration: none; line-height:48px; width:100%; display:inline-block; letter-spacing: 0.05em;">
+                                                                <span
+                                                                      style="color: #363436;">
+                                                                  <strong>
+                                                                    GET
+                                                                    IN
+                                                                    TOUCH
+                                                                  </strong>
+                                                                </span>
+                                                              </a>
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                      <!--[endif]-->
+                                                    </div>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+
+                                      </tbody>
+                                    </table>
+                                  </th>
+                                  <th class="displayBlock responsive-space-10" width="">
+                                  </th>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--FOOTER-->
+    <table class="body" border="0" align="center" cellpadding="0" cellspacing="0"
+           style="font-family: Arial,sans-serif; background-color: #FFF9F1;">
+      <tbody>
+        <tr height="37">
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <table class="sub-body" border="0" align="center" cellpadding="0" cellspacing="0"
+                   style="font-family: Arial,sans-serif;">
+              <tbody>
+                <tr>
+                  <td align="center">
+                    <a href="https://www.zeroco.com.au/"><img src="https://iili.io/d9huol.png"
+                                                              alt=""></a>
+                  </td>
+                </tr>
+                <tr height="18">
+                  <td></td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <p style="font-size: 12px; line-height: 24px;">
+                      © 2020 zeroco.com.au pty ltd. All rights reserved. ABN 74 633 757 954.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr height="30">
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </body>
+
+</html>
